@@ -8,7 +8,7 @@ If the above feature is added, the user will connect to their own WiFi and updat
 2) Password: b33cd675
 3) username: evoke
 4) Password: nicolas
-#Present features
+# Present features
 1)  Over The Air (OTA) firmware update
 2)  Vanilla Free RTOS task manager
 3)  Classic Serial Bluetooth or Serial BT
