@@ -1,3 +1,8 @@
+/* 
+| This is the header file main.cpp and it should have the header file of all function being called in main.cpp
+| The wifi, ESPmDNS headers are a builtin file of ESP32, 
+| The otehr heasers are form the lib folders
+*/
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
@@ -8,5 +13,6 @@
 #include <WebServer.h>
 #include <ESPmDNS.h>
 #include <Update.h>
+#include "web.h"
 
 #endif
