@@ -1,3 +1,8 @@
+/* 
+| This is the header file for all constants needed for this project
+| Each contant should have the word const and should be explained using some commets 
+|
+*/
 #ifndef __GLOBAL_CONST_H__
 #define ___GLOBAL_CONST_H__
 
@@ -12,5 +17,6 @@ const char* password = "b33cd675"; */
 const char* host = "evoke";                      // the name of the website for updationg ther firmware
 const char* ssid = "EvokeMotorcycles_5G1";       // the SSID of your router
 const char* password = "EvokeEvoke";             // The password of your internet
+
 
 #endif

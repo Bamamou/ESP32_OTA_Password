@@ -78,6 +78,7 @@ void setup(void) {
     }
   });
   server.begin();
+  task_Bluetooth.runInCore0(taskCode_Bluetooth, "Bluetooth", 3000, 500, 3);
 }
  
 void loop(void) {
