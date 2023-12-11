@@ -11,12 +11,12 @@ WebServer server(80);
  * setup function
  */
 void setup(void) {
-  Serial.begin(115200);
- 
+ Serial.begin(115200);
+
   // Connect to WiFi network
   WiFi.begin(ssid, password);
   Serial.println("");
- 
+
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -27,20 +27,13 @@ void setup(void) {
   Serial.println(ssid);
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
- 
-  // /*use mdns for host name resolution*/
-  // if (!MDNS.begin(host)) { //http://esp32.local
-  //   Serial.println("Error setting up MDNS responder!");
-  //   while (1) {
-  //     delay(1000);
-  //   }
-  // }
-  // Make it possible to access webserver at http://myEsp32Ota.local
-  if (!MDNS.begin(host)) {
-    Serial.println("Error setting up mDNS responder!");
-  } else {
-    Serial.printf("Access at http://%s.local\n", host); // I added the update to directly update 
-                                                                  // but it can modified to first have access to the below 
+
+  /*use mdns for host name resolution*/
+  if (!MDNS.begin(host)) { //http://esp32.local
+    Serial.println("Error setting up MDNS responder!");
+    while (1) {
+      delay(1000);
+    }
   }
   Serial.println("mDNS responder started");
   /*return index page which is stored in serverIndex */
@@ -78,8 +71,10 @@ void setup(void) {
     }
   });
   server.begin();
+  pinMode(ledPin,OUTPUT);
   task_Bluetooth.runInCore0(taskCode_Bluetooth, "Bluetooth", 3000, 500, 3);
 }
+
  
 void loop(void) {
   server.handleClient();
