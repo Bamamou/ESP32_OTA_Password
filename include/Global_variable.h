@@ -11,6 +11,7 @@
 
 /* #region TASK_HANDLES */
 extern TaskManager task_Bluetooth;         // An instance of the Vanilla RTOS task manager
+extern TaskManager task_Web;              // An instance or object for the web management
 const uint8_t ledPin = BUILTIN_LED;        //  The BuiltIN_LED pin 
 
 #endif

@@ -7,14 +7,14 @@
 #define __MAIN_H__
 
 #include<Arduino.h>
-#include"Global_Const.h"
-#include "Global_variable.h"
+
+//#include "Global_variable.h"
 #include "tasks_Bluetooth.h"
-#include<WiFi.h>
-#include <WiFiClient.h>
-#include <WebServer.h>
-#include <ESPmDNS.h>
-#include <Update.h>
-#include "web.h"
+// #include<WiFi.h>
+// #include <WiFiClient.h>
+// #include <WebServer.h>
+// #include <ESPmDNS.h>
+// #include <Update.h>
+#include "Task_Web.h"
 
 #endif
